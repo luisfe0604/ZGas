@@ -1,0 +1,110 @@
+/* Estilo do corpo da página */
+body {
+  margin: 0;
+  background-color: rgb(188, 188, 188);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  background-color: #121212;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo do título do cabeçalho */
+.header h1 {
+  font-size: 30px;
+  padding-left: 2%;
+}
+
+/* Estilo do menu de navegação no cabeçalho */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do contêiner principal que envolve a sidebar e o conteúdo principal */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Estilo da sidebar */
+.sidebar {
+  width: 200px; /* Largura aumentada para dar mais espaço aos itens */
+  background-color: rgb(60, 60, 60); /* Uma tonalidade mais escura de cinza */
+  color: #fff;
+  font-size: 20px; /* Reduzindo o tamanho da fonte para melhor legibilidade */
+  overflow-y: auto;
+  padding: 20px; /* Adicionando espaço interno para melhor aparência */
+  height: 85.5vh;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Estilo dos itens do menu da sidebar */
+.menu-item {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+}
+
+.menu-item:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.menu-item:last-child::after {
+  display: none;
+}

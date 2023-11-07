@@ -49,8 +49,29 @@ body {
 /* Estilo do contêiner principal que envolve a sidebar e o conteúdo principal */
 .home-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.content-page{
+  width: 100%;  
+}
+
+.action-buttons{
+  margin: 1%;
+  height: 40px;
+  width: 120px;
+  border-radius: 8px;
+  background-color: rgb(60, 60, 60);
+  border: none;
+  color: #fff;
+  font-size: 17px;
+}
+
+.action-buttons:hover{
+  transition: 0.5s;
+  border-color: #121212;
+  background-color: #121212;
+  color: #fff;
+  cursor: pointer;
 }
 
 .dashboard-container {
@@ -66,9 +87,8 @@ body {
   background-color: rgb(60, 60, 60); /* Uma tonalidade mais escura de cinza */
   color: #fff;
   font-size: 20px; /* Reduzindo o tamanho da fonte para melhor legibilidade */
-  overflow-y: auto;
   padding: 20px; /* Adicionando espaço interno para melhor aparência */
-  height: 85.5vh;
+  height: 85vh;
 }
 
 .menu{
@@ -91,6 +111,10 @@ body {
   position: relative;
 }
 
+.menu-item .last-item{
+  margin-bottom: 100px;
+}
+
 .menu-item::after {
   content: '';
   position: absolute;
@@ -107,4 +131,102 @@ body {
 
 .menu-item:last-child::after {
   display: none;
+}
+
+.data-grid{
+  margin: 0 1% 0 1%;
+  border: 10px solid orange; /* Definindo a cor da borda como laranja */
+  border-radius: 10px; /* Borda arredondada (opcional) */
+  box-shadow: 0 0 5px black;
+}
+
+.css-ptkaw2-MuiDataGrid-root .MuiDataGrid-withBorderColor {
+  border-color: #fb8c00 !important;
+}
+
+.css-ptkaw2-MuiDataGrid-root .MuiDataGrid-cell{
+  justify-content: center !important;
+}
+
+.css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+  justify-content: center;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #fbce8b !important;
+}
+
+
+.MuiDataGrid-row:nth-child(even) {
+  background-color: #ffe9c9; /* Cor de fundo para linhas pares */
+}
+
+.MuiDataGrid-row:nth-child(odd) {
+  background-color: #fff3e0; /* Cor de fundo para linhas ímpares */
+}
+
+.MuiDataGrid-footerContainer{
+  background-color: #fbce8b !important;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(60, 60, 60);
+  height: 100vh; 
+  width: 100vw; 
+}
+
+.box-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: rgb(188, 188, 188);
+  border-radius: 10px;
+  padding: 80px 70px;
+  box-shadow: 0 0 5px black;
+}
+
+.box-login img{
+  padding-bottom: 10%;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+.form-group input{
+  height: 50px;
+  width: 300px;
+  padding: 0 12px 0 12px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+}
+
+.button-submit{
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  background-color: #121212;
+  color: #fff;
+  width: 50%;
+  margin-top: 10%;
+}
+
+.button-submit:hover{
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgb(60, 60, 60);
 }

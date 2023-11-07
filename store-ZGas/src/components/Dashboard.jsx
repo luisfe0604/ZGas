@@ -31,6 +31,7 @@ function Graphic() {
       series: [{
         name: 'Vendas',
         data: data.values,
+        color: '#fb8c00',
       }],
     };
 

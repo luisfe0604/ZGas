@@ -2,14 +2,15 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'id', headerName: 'ID', width: 70,     disableColumnMenu: true, },
+  { field: 'firstName', headerName: 'First name', width: 130,     disableColumnMenu: true, },
+  { field: 'lastName', headerName: 'Last name', width: 130,     disableColumnMenu: true},
   {
     field: 'age',
     headerName: 'Age',
     type: 'number',
     width: 90,
+    disableColumnMenu: true,
   },
   {
     field: 'fullName',
@@ -19,7 +20,8 @@ const columns = [
     width: 160,
     valueGetter: (params) =>
       `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+      disableColumnMenu: true,
+    },
 ];
 
 const rows = [
@@ -55,20 +57,44 @@ const rows = [
   { id: 30, lastName: 'Cooper', firstName: 'Chloe', age: 30 },
 ];
 
+// export default function DataTable() {
+//   return (
+//     <div style={{ height: '630px', width: '100%'}}>
+//       <DataGrid className='data-grid'
+//         rows={rows}
+//         columns={columns}
+//         initialState={{
+//           pagination: {
+//             paginationModel: { page: 0, pageSize: 10 },
+//           },
+//         }}
+//         pageSizeOptions={[10]}
+//         checkboxSelection
+//       />
+//     </div>
+//   );
+// }
+
+
 export default function DataTable() {
+
   return (
-    <div style={{ height: '630px', width: '100%'}}>
-      <DataGrid className='data-grid'
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
-        pageSizeOptions={[10]}
-        checkboxSelection
-      />
+    <div style={{ height: '630px', width: '100%' }}>
+      <div className="data-grid-container">
+        <DataGrid className='data-grid'
+          rows={rows}
+          columns={columns}
+          rowClassName={(params) =>
+            params.index % 2 === 0 ? 'even-row' : 'odd-row'
+          }
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 9 },
+            },
+          }}
+          pageSize={9}
+        />
+      </div>
     </div>
   );
 }

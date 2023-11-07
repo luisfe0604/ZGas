@@ -6,9 +6,9 @@ const Header = () => {
       <h1>ZGÁS</h1>
       <nav className="nav">
         <ul>
-          <li><a href="/">Página Inicial</a></li>
-          <li><a href="/">Sobre</a></li>
-          <li><a href="/">Contato</a></li>
+          <li><a href="/home">Página Inicial</a></li>
+          {/* <li><a href="/">Sobre</a></li>
+          <li><a href="/">Contato</a></li> */}
         </ul>
       </nav>
     </header>

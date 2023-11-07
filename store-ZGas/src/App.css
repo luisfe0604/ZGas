@@ -51,11 +51,11 @@ body {
   display: flex;
 }
 
-.content-page{
-  width: 100%;  
+.content-page {
+  width: 100%;
 }
 
-.action-buttons{
+.action-buttons {
   margin: 1%;
   height: 40px;
   width: 120px;
@@ -66,7 +66,7 @@ body {
   font-size: 17px;
 }
 
-.action-buttons:hover{
+.action-buttons:hover {
   transition: 0.5s;
   border-color: #121212;
   background-color: #121212;
@@ -83,15 +83,20 @@ body {
 
 /* Estilo da sidebar */
 .sidebar {
-  width: 200px; /* Largura aumentada para dar mais espaço aos itens */
-  background-color: rgb(60, 60, 60); /* Uma tonalidade mais escura de cinza */
+  width: 200px;
+  /* Largura aumentada para dar mais espaço aos itens */
+  background-color: rgb(60, 60, 60);
+  /* Uma tonalidade mais escura de cinza */
   color: #fff;
-  font-size: 20px; /* Reduzindo o tamanho da fonte para melhor legibilidade */
-  padding: 20px; /* Adicionando espaço interno para melhor aparência */
+  font-size: 20px;
+  /* Reduzindo o tamanho da fonte para melhor legibilidade */
+  padding: 20px;
+  /* Adicionando espaço interno para melhor aparência */
   height: 85vh;
+  padding-right: 2%;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,10 +113,11 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 
-.menu-item .last-item{
+.menu-item .last-item {
   margin-bottom: 100px;
 }
 
@@ -123,7 +129,7 @@ body {
   background-color: #000000;
   bottom: 0;
   left: 0;
-}
+} 
 
 .menu-item:hover {
   background-color: rgb(46, 46, 46);
@@ -133,10 +139,26 @@ body {
   display: none;
 }
 
-.data-grid{
+.submenu-item {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  margin-top: 7% ;
+}
+
+.data-grid {
   margin: 0 1% 0 1%;
-  border: 10px solid orange; /* Definindo a cor da borda como laranja */
-  border-radius: 10px; /* Borda arredondada (opcional) */
+  border: 10px solid orange;
+  /* Definindo a cor da borda como laranja */
+  border-radius: 10px;
+  /* Borda arredondada (opcional) */
   box-shadow: 0 0 5px black;
 }
 
@@ -144,7 +166,7 @@ body {
   border-color: #fb8c00 !important;
 }
 
-.css-ptkaw2-MuiDataGrid-root .MuiDataGrid-cell{
+.css-ptkaw2-MuiDataGrid-root .MuiDataGrid-cell {
   justify-content: center !important;
 }
 
@@ -158,14 +180,16 @@ body {
 
 
 .MuiDataGrid-row:nth-child(even) {
-  background-color: #ffe9c9; /* Cor de fundo para linhas pares */
+  background-color: #ffe9c9;
+  /* Cor de fundo para linhas pares */
 }
 
 .MuiDataGrid-row:nth-child(odd) {
-  background-color: #fff3e0; /* Cor de fundo para linhas ímpares */
+  background-color: #fff3e0;
+  /* Cor de fundo para linhas ímpares */
 }
 
-.MuiDataGrid-footerContainer{
+.MuiDataGrid-footerContainer {
   background-color: #fbce8b !important;
 }
 
@@ -174,38 +198,42 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(60, 60, 60);
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./images/background.jpg');
+  background-size: cover; /* Ajuste o tamanho da imagem de fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
 }
 
-.box-login{
+.box-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #000;
-  background-color: rgb(188, 188, 188);
-  border-radius: 10px;
-  padding: 80px 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 70px 70px;
   box-shadow: 0 0 5px black;
 }
 
-.box-login img{
+.box-login img {
   padding-bottom: 10%;
+  height: 130px;
+  padding-bottom: 80px;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.form-group{
+.form-group {
   margin-bottom: 15px;
 }
 
-.form-group input{
+.form-group input {
   height: 50px;
   width: 300px;
   padding: 0 12px 0 12px;
@@ -214,7 +242,7 @@ body {
   font-size: 18px;
 }
 
-.button-submit{
+.button-submit {
   height: 50px;
   border-radius: 25px;
   border: none;
@@ -225,7 +253,7 @@ body {
   margin-top: 10%;
 }
 
-.button-submit:hover{
+.button-submit:hover {
   cursor: pointer;
   transition: 0.5s;
   background-color: rgb(60, 60, 60);

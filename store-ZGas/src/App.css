@@ -19,10 +19,12 @@ body {
   align-items: center;
 }
 
-/* Estilo do título do cabeçalho */
-.header h1 {
-  font-size: 30px;
-  padding-left: 2%;
+.link-header{
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin: 13px;
 }
 
 /* Estilo do menu de navegação no cabeçalho */
@@ -257,4 +259,16 @@ body {
   cursor: pointer;
   transition: 0.5s;
   background-color: rgb(60, 60, 60);
+}
+
+.content-actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px 20px 3px 5px;
+}
+
+#search-input{
+  width: 40vh;
 }
